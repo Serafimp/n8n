@@ -41,6 +41,9 @@ RUN \
 	cd - && \
 	rm -r /launcher-temp
 
+RUN npm install n8n-nodes-puppeteer
+RUN apt-get update && apt-get install -y chromium
+
 COPY docker-entrypoint.sh /
 
 RUN \
